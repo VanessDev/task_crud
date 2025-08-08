@@ -1,7 +1,8 @@
+/* Fond arc-en-ciel animé */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 24px;
+  font-family: system-ui, Arial, sans-serif;
   background: linear-gradient(
     135deg,
     red,
@@ -13,9 +14,8 @@ body {
     violet
   );
   background-size: 400% 400%;
-  animation: rainbow 10s ease infinite;
+  animation: rainbow 12s ease infinite;
 }
-
 @keyframes rainbow {
   0% {
     background-position: 0% 50%;
@@ -27,51 +27,135 @@ body {
     background-position: 0% 50%;
   }
 }
-
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 h1 {
+  color: #fff;
   text-align: center;
-  color: white;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  margin: 0 0 16px;
+}
+
+.card {
+  background: #ffffffee;
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.topbar a,
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #111827;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.btn-secondary {
+  background: #6b7280;
 }
 
 table {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
-  background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
-th,
-td {
-  padding: 12px 15px;
+thead th {
+  background: #111827;
+  color: #fff;
   text-align: left;
+  padding: 12px 16px;
+}
+td {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 12px 16px;
+  vertical-align: top;
+}
+tbody tr:nth-child(even) td {
+  background: #fafafa;
 }
 
-th {
-  background-color: #333;
-  color: white;
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.s-afaire {
+  background: #e0e7ff;
+  color: #1e3a8a;
+}
+.s-encours {
+  background: #fff7ed;
+  color: #9a3412;
+}
+.s-terminee {
+  background: #dcfce7;
+  color: #166534;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.badge-haute {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.badge-moyenne {
+  background: #fef3c7;
+  color: #92400e;
+}
+.badge-basse {
+  background: #dcfce7;
+  color: #166534;
 }
 
-/* Couleurs par priorité */
-.priority-basse {
-  background-color: #d4edda;
-  color: #155724;
-  font-weight: bold;
+.form {
+  background: #ffffffee;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
-.priority-moyenne {
-  background-color: #fff3cd;
-  color: #856404;
-  font-weight: bold;
+.form label {
+  display: block;
+  font-weight: 600;
+  margin: 10px 0 6px;
 }
-.priority-haute {
-  background-color: #f8d7da;
-  color: #721c24;
-  font-weight: bold;
+.form input[type="text"],
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
